@@ -26,11 +26,11 @@ D:\Projetos\ConversorBaseDadosSqlite\DatabaseEFcore\bin\Debug\netcoreapp3.1\Micr
 D:\Projetos\ConversorBaseDadosSqlite\DatabaseEFcore\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
 D:\Projetos\ConversorBaseDadosSqlite\DatabaseEFcore\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
 D:\Projetos\ConversorBaseDadosSqlite\DatabaseEFcore\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
-D:\Projetos\ConversorBaseDadosSqlite\DatabaseEFcore\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
-D:\Projetos\ConversorBaseDadosSqlite\DatabaseEFcore\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 D:\Projetos\ConversorBaseDadosSqlite\DatabaseEFcore\obj\Debug\netcoreapp3.1\DatabaseEFcore.csproj.CopyComplete
 D:\Projetos\ConversorBaseDadosSqlite\DatabaseEFcore\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 D:\Projetos\ConversorBaseDadosSqlite\DatabaseEFcore\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Projetos\ConversorBaseDadosSqlite\DatabaseEFcore\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+D:\Projetos\ConversorBaseDadosSqlite\DatabaseEFcore\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 D:\Projetos\ConversorBaseDadosSqlite\DatabaseEFcore\bin\Debug\netcoreapp3.1\Microsoft.Data.Sqlite.dll
 D:\Projetos\ConversorBaseDadosSqlite\DatabaseEFcore\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
 D:\Projetos\ConversorBaseDadosSqlite\DatabaseEFcore\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Sqlite.dll
