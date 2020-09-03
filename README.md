@@ -87,4 +87,4 @@ Restore succeeded.
 
 <h3><b>Comando para criar o scaffold do database Sqlite</h3></b>
 
-Comando: dotnet ef dbcontext scaffold 'data source=databaseClass/database.sqlite' Microsoft.EntityFrameworkCore.Sqlite
+Comando: dotnet ef dbcontext scaffold 'data source=databaseLocation/database.sqlite' Microsoft.EntityFrameworkCore.Sqlite
