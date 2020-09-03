@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "h8HVKbWAD1HDcCIOxm0ons4uK+oSp4f+Vt8IK3dyi5sTg33mR/FLAqcBLvEijbdlyJjdkLgzv8CLlHR22Khz/g==",
+  "success": true,
+  "projectFilePath": "D:\\Projetos\\ConversorBaseDadosSqlite\\DatabaseEFcore\\DatabaseEFcore.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\taikd\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}
