@@ -1,7 +1,15 @@
 # ConversorSqliteToSqlServer
 
 Teste para criação de um conversor de base dados SQLite para SQLServer utilizando o Entity Framework Core
+
 Documentação do EF-c: https://docs.microsoft.com/pt-br/ef/core/miscellaneous/cli/dotnet
+
+Extensões utilizadas: Docker
+                      NutGet Package Manager
+                      SQL Server(mssql)
+
+Programas: Docker - https://www.docker.com/
+
 
 <h3><b>Comando para verificar a versão do dotnet</h3></b>
 
@@ -88,3 +96,47 @@ Restore succeeded.
 <h3><b>Comando para criar o scaffold do database Sqlite</h3></b>
 
 Comando: dotnet ef dbcontext scaffold 'data source=databaseLocation/database.sqlite' Microsoft.EntityFrameworkCore.Sqlite
+
+-----------
+
+<h3><b>Comando para gerar a imagem do banco SQL-Server</h3></b>
+
+Comando: docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=P@ssword1' -p 1433:1433 -d microsoft/mssql-server-linux
+
+-e => Significa o ambiente
+-p => Significa qual porta sera aberta para o bando de dados
+-d => Significa que é uma dependência de desenvolvimento
+
+Após rodar o comando, algumas alterações no DatabaseEFcore.csproj precisaram ser alteradas
+na linha onde contém <b>PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.7"</b> deverá ser alterada para <b>PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.7" </b>.
+
+A classe dataBaseContext.cs deverá ficar assim:
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer("Server=127.0.0.1,1433;Database=EcoletaDatabase;User id=sa;Password=P@ssword1");
+            }
+        }
+
+-----
+
+<h3><b>Comando para rodar as migrations</h3></b>
+
+Comando: dotnet ef migrations add init
+
+Build started...
+Build succeeded.
+Done. To undo this action, use 'ef migrations remove'
+
+------------
+
+<h3><b>Comando para atualizar a base de dados com as estruturas do Sqlite</h3></b>
+
+Comando: dotnet ef database update
+
+Build started...
+Build succeeded.
+Applying migration '20200904012718_init'.
+Done.

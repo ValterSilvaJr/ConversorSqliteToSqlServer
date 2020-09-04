@@ -16,8 +16,6 @@ namespace DatabaseEFcore
         }
 
         public virtual DbSet<Items> Items { get; set; }
-        public virtual DbSet<KnexMigrations> KnexMigrations { get; set; }
-        public virtual DbSet<KnexMigrationsLock> KnexMigrationsLock { get; set; }
         public virtual DbSet<Points> Points { get; set; }
         public virtual DbSet<PointsItems> PointsItems { get; set; }
 
@@ -25,8 +23,7 @@ namespace DatabaseEFcore
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlite("data source=databaseClass/database.sqlite");
+                optionsBuilder.UseSqlServer("Server=127.0.0.1,1433;Database=EcoletaDatabase;User id=sa;Password=P@ssword1");
             }
         }
 
@@ -49,38 +46,6 @@ namespace DatabaseEFcore
                     .IsRequired()
                     .HasColumnName("title")
                     .HasColumnType("varchar(255)");
-            });
-
-            modelBuilder.Entity<KnexMigrations>(entity =>
-            {
-                entity.ToTable("knex_migrations");
-
-                entity.Property(e => e.Id)
-                    .HasColumnName("id")
-                    .ValueGeneratedNever();
-
-                entity.Property(e => e.Batch).HasColumnName("batch");
-
-                entity.Property(e => e.MigrationTime)
-                    .HasColumnName("migration_time")
-                    .HasColumnType("datetime");
-
-                entity.Property(e => e.Name)
-                    .HasColumnName("name")
-                    .HasColumnType("varchar(255)");
-            });
-
-            modelBuilder.Entity<KnexMigrationsLock>(entity =>
-            {
-                entity.HasKey(e => e.Index);
-
-                entity.ToTable("knex_migrations_lock");
-
-                entity.Property(e => e.Index)
-                    .HasColumnName("index")
-                    .ValueGeneratedNever();
-
-                entity.Property(e => e.IsLocked).HasColumnName("is_locked");
             });
 
             modelBuilder.Entity<Points>(entity =>
